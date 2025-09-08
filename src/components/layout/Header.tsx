@@ -34,10 +34,24 @@ export default function Header({ userRole = 'student', userName = 'John Doe', at
 
           {/* Navigation Links */}
           <nav className="hidden md:flex items-center gap-6">
-            <Button variant="ghost" size="sm">Dashboard</Button>
-            <Button variant="ghost" size="sm">Attendance</Button>
-            <Button variant="ghost" size="sm">Analytics</Button>
-            <Button variant="ghost" size="sm">Challenges</Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href="/dashboard">Dashboard</a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href="/attendance">Attendance</a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href="/analytics">Analytics</a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href="/challenges">Challenges</a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href="/community">Community</a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href="/study-groups">Study Groups</a>
+            </Button>
             {userRole === 'faculty' && (
               <Button variant="ghost" size="sm">Manage</Button>
             )}
